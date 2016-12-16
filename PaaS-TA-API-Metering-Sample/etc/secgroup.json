@@ -1,0 +1,9 @@
+[{
+    "protocol": "tcp",
+    "destination": "0.0.0.0/0",
+    "ports": "1-65535"
+}, {
+    "protocol": "udp",
+    "destination": "0.0.0.0/0",
+    "ports": "1-65535"
+}]

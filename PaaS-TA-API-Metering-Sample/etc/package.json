@@ -1,0 +1,49 @@
+{
+  "name": "paasta-api-metering-etc",
+  "description": "Misc Paasta-api-metering build scripts",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://github.com/OpenPaaSRnD/Documents",
+  "keywords": [
+    "paasta",
+    "metering"
+  ],
+  "files": [
+    ".npmrc",
+    "appname",
+    "apprc",
+    "apps.rc",
+    "foreach",
+    "secgroup.json",
+    "versions",
+    "lib/",
+    "src/"
+  ],
+  "main": "src/index.js",
+  "bin": {
+    "apprc": "./apprc",
+    "foreach": "./foreach",
+    "versions": "./versions"
+  },
+  "scripts": {
+    "babel": "false",
+    "test": "eslint",
+    "lint": "eslint",
+    "pub": "publish"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "js-yaml": "^3.4.3",
+    "strip-json-comments": "0.1.x",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "abacus-eslint": "file:../tools/eslint",
+    "abacus-publish": "file:../tools/publish"
+  },
+  "engines": {
+    "node": ">=5.11.1",
+    "npm": ">=3.8.6"
+  }
+}

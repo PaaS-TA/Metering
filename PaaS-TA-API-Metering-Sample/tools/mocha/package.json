@@ -1,0 +1,53 @@
+{
+  "name": "abacus-mocha",
+  "description": "Painless testing and code coverage with Mocha and Istanbul",
+  "license": "Apache-2.0",
+  "version": "0.0.6-dev.8",
+  "private": true,
+  "homepage": "https://github.com/cloudfoundry-incubator/cf-abacus/tools/mocha",
+  "bugs": {
+    "url": "https://github.com/cloudfoundry-incubator/cf-abacus/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cloudfoundry-incubator/cf-abacus.git"
+  },
+  "keywords": [
+    "cf",
+    "abacus"
+  ],
+  "files": [
+    ".npmrc",
+    "mocha",
+    "src/"
+  ],
+  "main": "src/index.js",
+  "bin": {
+    "mocha": "./mocha"
+  },
+  "scripts": {
+    "babel": "true",
+    "test": "eslint && ./mocha",
+    "lint": "eslint",
+    "pub": "publish"
+  },
+  "dependencies": {
+    "chai": "^3.0.0",
+    "commander": "^2.8.1",
+    "convert-source-map": "^1.1.1",
+    "istanbul": "^0.4.0",
+    "longjohn": "^0.2.9",
+    "mocha": "^2.3.3",
+    "sinon": "^1.14.1",
+    "source-map": "^0.5.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "abacus-eslint": "file:../eslint",
+    "abacus-publish": "file:../publish"
+  },
+  "engines": {
+    "node": ">=5.11.1",
+    "npm": ">=3.8.6"
+  }
+}

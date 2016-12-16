@@ -1,0 +1,18 @@
+<FindBugsFilter>
+   <Match classregex="org\.jacorb\.poa\.gui\..*"/>
+   <!-- Exclude tracing as very old unsupported code -->
+   <Match classregex="org\.jacorb\.util\.tracing\..*"/>
+ 
+   <Match>
+      <Bug pattern="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS"/>
+   </Match>
+   <Match>
+      <Bug pattern="DM_DEFAULT_ENCODING"/>
+   </Match>
+   <Match>
+      <Bug pattern="NM_SAME_SIMPLE_NAME_AS_INTERFACE"/>
+   </Match>
+   <Match>
+   		<Class name="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService"></Class>
+   </Match>
+</FindBugsFilter>

@@ -1,0 +1,36 @@
+{
+  "name": "pasta-usage-metering",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "pushR": "bin/pushR",
+    "startR": "bin/startR"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "should": "^11.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "should": "^11.1.0",
+    "supertest": "^2.0.0",
+    "express": "^4.14.0",
+    "abacus-retry": "^0.0.6-dev.8",
+    "abacus-debug": "^0.0.6-dev.8",
+    "abacus-oauth": "^0.0.6-dev.8",
+    "abacus-request": "^0.0.6-dev.8",
+    "async": "^2.0.1",
+    "path": "^0.12.7",
+    "pouchdb": "^5.3.2",
+    "underscore": "^1.8.3"
+  }
+}
+

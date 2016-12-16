@@ -1,0 +1,48 @@
+{
+  "name": "abacus-coverage",
+  "description": "Report overall code coverage from Istanbul coverage files",
+  "license": "Apache-2.0",
+  "version": "0.0.6-dev.8",
+  "private": true,
+  "homepage": "https://github.com/cloudfoundry-incubator/cf-abacus/tools/coverage",
+  "bugs": {
+    "url": "https://github.com/cloudfoundry-incubator/cf-abacus/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cloudfoundry-incubator/cf-abacus.git"
+  },
+  "keywords": [
+    "cf",
+    "abacus"
+  ],
+  "files": [
+    ".npmrc",
+    "coverage",
+    "src/"
+  ],
+  "main": "src/index.js",
+  "bin": {
+    "coverage": "./coverage"
+  },
+  "scripts": {
+    "babel": "true",
+    "test": "eslint && mocha",
+    "lint": "eslint",
+    "pub": "publish"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "istanbul": "^0.3.17",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "abacus-eslint": "file:../eslint",
+    "abacus-mocha": "file:../mocha",
+    "abacus-publish": "file:../publish"
+  },
+  "engines": {
+    "node": ">=5.11.1",
+    "npm": ">=3.8.6"
+  }
+}

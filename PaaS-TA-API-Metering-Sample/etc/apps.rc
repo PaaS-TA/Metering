@@ -1,0 +1,10 @@
+default:
+  apps:
+    - lib/sample_api_node_service
+    - lib/sample_api_node_caller
+
+small:
+
+medium:
+
+large:

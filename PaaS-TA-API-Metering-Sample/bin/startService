@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+cd ./sample_api_node_service
+
+npm install
+
+# manifest를 로컬환경변수로 설정한다. (포트번호는 로컬에서만 사용한다.)
+export PORT=9602
+export DEBUG=*
+export API=https://api.172.16.100.109.xip.io
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+export COLLECTOR=http://abacus-usage-collector.172.16.100.109.xip.io/v1/metering/collected/usage
+export RESOURCE_ID=object-storage
+export PLAN_ID=standard
+export MEASURE_1=storage
+export MEASURE_2=light_api_calls
+export MEASURE_3=heavy_api_calls
+
+# export CLIENT_ID=abacus-linux-container
+# export CLIENT_SECRET=secret
+
+node app.js
+
+wait

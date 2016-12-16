@@ -1,0 +1,63 @@
+{
+  "name": "paasta-api-metering-sample",
+  "version": "0.0.1",
+  "description": "API metering sample",
+  "author": "PAASTA",
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://github.com/OpenPaaSRnD/Documents",
+  "keywords": [
+    "paasta",
+    "metering"
+  ],
+  "files": [
+    ".eslintrc",
+    ".jshintrc",
+    ".jsinspectrc",
+    ".npmrc",
+    "bin/",
+    "etc/",
+    "lib/",
+    "tools/"
+  ],
+  "scripts": {
+    "buildB": "bin/buildBroker",
+    "pushB": "bin/pushBroker",
+    "pushS": "bin/pushService",
+    "startS": "bin/startService",
+    "pushC": "bin/pushCaller",
+    "startC": "bin/startCaller",
+    "buildJ": "bin/buildJavaService",
+    "pushJ": "bin/pushJavaService",
+    "bootstrap": "npm install etc tools/eslint tools/mocha",
+    "build": "etc/versions && npm run bootstrap && npm install && npm test",
+    "clean": "git clean -df",
+    "lint": "foreach sample :path npm run lint",
+    "hint": "foreach sample :path jshint src",
+    "test": "foreach sample node_modules/:name npm test && coverage",
+    "coveralls": "cat .coverage/lcov.info | coveralls",
+    "dupcode": "jsinspect",
+    "pub": "foreach sample :path npm run pub && publish"
+  },
+  "dependencies": {
+    "sample-api-node-caller": "file:lib/sample_api_node_caller",
+    "sample-api-node-service": "file:lib/sample_api_node_service",
+    "paasta-api-metering-etc": "file:etc",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "abacus-cfpack": "file:tools/cfpack",
+    "abacus-cfpush": "file:tools/cfpush",
+    "abacus-coverage": "file:tools/coverage",
+    "abacus-eslint": "file:tools/eslint",
+    "abacus-mocha": "file:tools/mocha",
+    "abacus-publish": "file:tools/publish",
+    "coveralls": "^2.11.3",
+    "jshint": "^2.8.0",
+    "jsinspect": "^0.6.1"
+  },
+  "engines": {
+    "node": ">=5.11.1",
+    "npm": ">=3.8.6"
+  }
+}

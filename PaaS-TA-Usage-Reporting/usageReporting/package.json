@@ -1,0 +1,35 @@
+{
+  "name": "pasta-usage-reporting",
+  "version": "0.1.0",
+  "main": "app.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "bin/start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "abacus-retry": "^0.0.6-dev.8",
+    "abacus-debug": "^0.0.6-dev.8",
+    "abacus-oauth": "^0.0.6-dev.8",
+    "abacus-request": "^0.0.6-dev.8",
+    "async": "^2.0.1",
+    "path": "^0.12.7",
+    "underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": ">=5.11.1",
+    "npm": ">=3.8.6"
+  },
+  "description": "",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "mocha": "^3.0.2",
+    "should": "^11.1.0",
+    "supertest": "^2.0.0"
+  }
+}

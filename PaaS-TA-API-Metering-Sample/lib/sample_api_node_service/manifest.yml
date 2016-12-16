@@ -1,0 +1,28 @@
+---
+applications:
+- name: sample-api-node-service   # 애플리케이션 이름
+  host: sample-api-node-service   # 애플리케이션 호스트명
+  memory: 512M                    # 애플리케이션 메모리 사이즈
+  disk_quota: 512M                # 애플리케이션 디스크 사이즈
+  instances: 1                    # 애플리케이션 인스턴스 개수
+  command: npm start              # CF에서의 애플리케이션 시작 명령어
+  path: ./.cfpack/app.zip         # 배포될 애플리케이션의 위치
+  env:
+    CONF: default
+    DEBUG: s*
+    NODE_TLS_REJECT_UNAUTHORIZED: 0 # SSL flag off
+    API: https://api.bosh-lite.com  # CF API 서비스
+    COLLECTOR: https://abacus-usage-collector.bosh-lite.com/v1/metering/collected/usage
+    SECURED: true                   # Secured Abacus 설정: false or true
+    AUTH_SERVER: https://api.bosh-lite.com:443
+    CLIENT_ID: abacus
+    CLIENT_SECRET: secret
+    JWTKEY: |+
+      -----BEGIN PUBLIC KEY-----
+      MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHFr+KICms+tuT1OXJwhCUmR2d
+      KVy7psa8xzElSyzqx7oJyfJ1JZyOzToj9T5SfTIq396agbHJWVfYphNahvZ/7uMX
+      qHxf+ZH9BL1gk9Y6kCnbM5R60gfwjyW1/dQPjOzn9N394zd2FJoFHwdq9Qs0wBug
+      spULZVNRxq7veq/fzwIDAQAB
+      -----END PUBLIC KEY-----
+    JWTALGO: RS256
+    THROTTLE: 2

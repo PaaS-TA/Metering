@@ -1,0 +1,15 @@
+---
+applications:
+- name: sample-api-node-caller  # 애플리케이션 이름
+  memory: 512M                  # 애플리케이션 메모리 사이즈
+  disk_quota: 512M
+  instances: 1                  # 애플리케이션 인스턴스 개수
+  path: ./.cfpack/app.zip       # 배포될 애플리케이션의 위치
+  command: npm start            # CF에서의 애플리케이션 시작 명령어
+  env:
+    DEBUG: a*
+    ORG_ID: d6ce3670-ab9c-4453-b993-f2821f54846b
+    SECURED: false
+    #AUTH_SERVER: https://api.bosh-lite.com:443
+    #CLIENT_ID: abacus
+    #CLIENT_SECRET: secret

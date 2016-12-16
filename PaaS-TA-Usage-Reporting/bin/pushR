@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+# cd ./usageReporting && if [ -d node_modules ]; then rm -r node_modules; fi && cp -a ../lib . && cf push
+
+cd ./usageReporting && if [ -d node_modules ]; then rm -r node_modules; fi && cf push

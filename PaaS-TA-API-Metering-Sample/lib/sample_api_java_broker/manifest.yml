@@ -1,0 +1,6 @@
+---
+applications:
+- name: sample-api-java-broker
+  memory: 512M
+  instances: 1
+  path: build/libs/sample-api-java-broker.jar

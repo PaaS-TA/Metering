@@ -1,0 +1,9 @@
+---
+applications:
+- name: sample-api-java-service  # 애플리케이션 이름
+  memory: 512M # 애플리케이션 메모리 사이즈
+  instances: 1 # 애플리케이션 인스턴스 개수
+  host: sample-api-java-service
+  path: ./build/libs/sample_api_java_service.jar # 배포될 애플리케이션의 위치
+  env:
+    SPRING_PROFILES_ACTIVE : cloud

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+cd ./sample_api_node_service && cf push

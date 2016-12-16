@@ -1,0 +1,22 @@
+---
+applications:
+- name: paasta-usage-reporting # 애플리케이션 이름
+  memory: 512M # 애플리케이션 메모리 사이즈
+  disk_quota: 512M
+  instances: 1 # 애플리케이션 인스턴스 개수
+  command: node app.js # 애플리케이션 실행 명령어
+  path: ./ # 배포될 애플리케이션의 위치
+  env:
+    DEBUG: a*
+    API: https://api.bosh-lite.com
+    CF_CLIENT_ID: abacus-cf-bridge
+    CF_CLIENT_SECRET: secret
+    ABACUS_REPORT_SERVER: http://abacus-usage-reporting.bosh-lite.com
+    NODE_TLS_REJECT_UNAUTHORIZED: 0
+    NODE_MODULES_CACHE: false
+    SECURED: false
+    # AUTH_SERVER:
+    # CLIENT_ID:
+    # CLIENT_SECRET:
+    # JWTKEY:
+    # JWTALGO:

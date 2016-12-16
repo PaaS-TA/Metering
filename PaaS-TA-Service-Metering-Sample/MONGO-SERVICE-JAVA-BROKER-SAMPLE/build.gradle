@@ -1,0 +1,124 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.0.BUILD-SNAPSHOT")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+
+ext {
+  springBootCfServiceBrokerVersion = "2.5.0"
+  springBootVersion = '1.3.0.BUILD-SNAPSHOT'
+  baseName = 'openpaas-service-java-broker-mongodb'
+  findbugs.toolVersion = '3.0.0'
+  version =  '2.5'
+  
+  hibernateValidatorVersion = '5.1.0.Final'
+  jsonPathVersion = '0.9.1'
+}
+
+jar {
+    archiveName = 'openpaas-cf-service-java-broker-mongodb.jar'
+    
+}
+
+processResources {
+
+	if (project.hasProperty('jarType')) {
+		if (project.jarType == 'openpaas_bosh') {
+			exclude 'application-mvc.properties'
+			exclude 'datasource.properties'
+			exclude 'logback.xml'
+		}
+	}
+	
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    
+    // 서비스브로커 라이브러리 
+    compile files('libs/openpaas-service-java-broker-ex.jar')
+    
+    // 미터링 사용량 객체 생성 디펜던시
+    compile("org.json:json:20160212")
+    compile("com.googlecode.json-simple:json-simple:1.1") 
+    
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+    
+	//testCompile("org.cloudfoundry:spring-boot-cf-service-broker-tests:${springBootCfServiceBrokerVersion}")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+    testCompile("com.jayway.jsonpath:json-path:${jsonPathVersion}")
+    testCompile("org.apache.httpcomponents:httpclient:4.4.1")
+    testCompile ("com.google.code.findbugs:annotations:3.0.0")
+    testCompile("org.powermock:powermock-mockito-release-full:1.6.2")    
+	compile("org.apache.commons:commons-dbcp2")    
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb:${springBootVersion}")
+     
+    //compile("com.sun.jersey:jersey-bundle:1.18.1")
+    // BASE 64     
+    compile("commons-codec:commons-codec:1.5")   
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+project.ext {
+    javaJdkHome = '/usr'
+    javaVersion = '1.6'
+
+//    Plugin and Tool version
+    pmdVersion = '5.0.4'
+    findbugsVersion = '3.0.1'
+}
+pmd {
+  targetJdk = project.javaVersion
+  toolVersion = project.pmdVersion
+  sourceSets = [sourceSets.main]	
+  ruleSetFiles = files("$rootDir/rulesets/pmd/base-ruleset.xml")
+  ignoreFailures = true
+  reportsDir = file("${buildDir}/pmd-output")
+  }
+pmdMain {
+      reports {
+           xml.destination = file("${pmd.reportsDir}/pmd-report.xml")
+           xml.enabled = true
+      }
+ }
+ 
+findbugs {
+ 	  toolVersion = project.findbugsVersion
+ 	  sourceSets = [sourceSets.main]	
+	  excludeFilter = file("$rootDir/rulesets/findbugs/base-ruleset.xml")
+	  ignoreFailures = true
+	  reportsDir = file("${buildDir}/findbugs-output")
+     	 }
+findbugsMain {
+      reports {
+       xml.destination = file("${findbugs.reportsDir}/findbugs-report.xml")
+       xml.enabled = true
+      }
+ }
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+		

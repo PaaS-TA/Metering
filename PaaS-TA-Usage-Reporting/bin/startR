@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+# 라이브러리 폴러를 cpoy 한다.
+# cp -a ./lib ./usageReporting
+# if [ -d ./usageReporting/pasta-usage-aggregator-batch ]; then rm -r ./usageReporting/pasta-usage-aggregator-batch; fi
+
+cd ./usageReporting
+
+npm install
+
+# 포트번호는 로컬에서만 사용
+export PORT=9507
+
+export API=https://api.bosh-lite.com
+export CF_CLIENT_ID=abacus-cf-bridge
+export CF_CLIENT_SECRET=secret
+export CLIENT_ID=abacus-linux-container
+export CLIENT_SECRET=secret
+export JWTKEY=secret
+export JWTALGO=HS256
+export DEBUG=*
+
+# ignore self signed cert error
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+
+export ABACUS_REPORT_SERVER=https://abacus-usage-reporting.bosh-lite.com
+
+node app.js
+
+wait

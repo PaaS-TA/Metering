@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('#result_div').html('');
+
+        var appUrl = document.URL;
+
+        var input_param1 = '서울';
+        var input_param2 = '무교동';
+
+        $('#send_btn').click(function(){
+
+            $('#result_div').html('');
+
+            var data = sendData( input_param1, input_param2 );
+
+            $.ajax({
+                url: appUrl + 'sampleApiSerivceCall',
+                type:"POST",
+                data:data,
+                success:function(data)
+                {
+                    $('#result_div').html("posted.");
+                },
+                error:function(jqXHR,textStatus,errorThrown)
+                {
+                    $('#result_div').html(errorThrown);
+                }
+            });
+
+        });
+    });
+
+    // 서비스로 보낼 데이타를 작성한다.
+    var sendData = function buildJSON( input_param1, input_param2 ) {
+
+        return {
+            input_param1: input_param1,
+            input_param2: input_param2
+        };
+    };
+
+</script>
+</head>
+<body>
+<form id="form">
+    <!--<input type="hidden" id="appUrl" name="appUrl" value="{{appUrl}}">-->
+    <!--<input type="hidden" id="vcapService" name="vcapService" value="{{vcapService}}">-->
+</form>
+
+<h3>CF REMOTE SERVICE API CALL TEST</h3>
+
+<button id="send_btn">SEND SERVICE API CALL</button>
+<br>
+<div id="result_div"></div>
+
+<!--<h4>{{vcapService}}</h4>-->
+
+</body>
+</html>

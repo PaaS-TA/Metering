@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+'use strict';
+
+// Run our Sample Api Service server
+require('./lib/app.js').runCLI();

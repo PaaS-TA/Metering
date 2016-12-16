@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="0" timestamp="1477638259389" analysisTimestamp="1477638259417" release="">
+  <Project projectName="">
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/exception/MongoServiceException.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/repository/MongoServiceInstanceBindingRepository.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/repository/MongoServiceInstanceRepository.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/model/MongoServiceInstance.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/config/Application.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/config/MongoConfig.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/config/BrokerConfig.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/config/CatalogConfig.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/config/WebXml.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl$1.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/MongoCatalogService.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceBindingService.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceService.class</Jar>
+    <Jar>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/build/classes/main/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl$1.class</Jar>
+    <AuxClasspathEntry>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/libs/openpaas-service-java-broker-ex.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.json/json/20160212/a742e3f85161835b95877478c5dd5b405cefaab9/json-20160212.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/5e303a03d04e6788dddfa3655272580ae0fc13bb/json-simple-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.3.0.BUILD-SNAPSHOT/787ef12a3a503803dcf94dce9afde69f370e868e/spring-boot-starter-web-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-security/1.3.0.BUILD-SNAPSHOT/bcbb1eba4cb8b88f223ff79df9fd846c2d38cb64/spring-boot-starter-security-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-dbcp2/2.1.1/c4f4a76171671ccf293be8995a498eab7fa8ed24/commons-dbcp2-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb/1.3.0.BUILD-SNAPSHOT/e1ff40002a199ecb356b97667c5108db4e9c9eec/spring-boot-starter-data-mongodb-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.5/cf993e250ff71804754ec2734a16f23c0be99f70/commons-codec-1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.3.0.BUILD-SNAPSHOT/1287f066aa2c5db4d0ba67f57a3c81d6ddf21ca/spring-boot-starter-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.3.0.BUILD-SNAPSHOT/177b5fa9ac1ef3b006126dfe65b73488b0b33155/spring-boot-starter-tomcat-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/1.3.0.BUILD-SNAPSHOT/7a9fcde64951d47539026eaa526097757d8c5ce5/spring-boot-starter-validation-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.6.3/5c4fcae53dd82e2c549b8322d78c6ff47c94c8a8/jackson-databind-2.6.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.3.RELEASE/98eea3fbe01450fff18aeb7e6003f80a879a049e/spring-web-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.3.RELEASE/46803840259c6d51c531e4f07f4213d758c6ee1d/spring-webmvc-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.2.3.RELEASE/6384a57a024df03bfcb1eeccd3d820da98125b92/spring-aop-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/4.0.3.RELEASE/31c0a4d0159f1b668d9512f57fb46aac29949b08/spring-security-config-4.0.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.0.3.RELEASE/5f0233d94ca53ac8710780b43791f633f970480a/spring-security-web-4.0.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.4.2/e5f4f28f19d57716fbc3989d7a357ebf1e454fea/commons-pool2-2.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.13.3/e8835850d2866528ecd45617f837c8110341ec99/mongo-java-driver-2.13.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.8.1.RELEASE/b90c75c49d1271c06e95ba635b73882237d3c262/spring-data-mongodb-1.8.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.3.0.BUILD-SNAPSHOT/7802bed1710cdc531387584c06aaf606d7eb9252/spring-boot-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.3.0.BUILD-SNAPSHOT/db72a3500cfd9739c91be5ce7f6c7358f99e8123/spring-boot-autoconfigure-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.3.0.BUILD-SNAPSHOT/81aba3383bd2b419bfc763aedfb9cb9c32377e9c/spring-boot-starter-logging-1.3.0.BUILD-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.3.RELEASE/3ed00dad7a16b2a28df9348294f6a67151f43cf6/spring-core-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.16/d64fb662c9e42789149f5078a62a22edda786c6a/snakeyaml-1.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.0.28/dd5f6dea56f0227f1b4e7d85ae6ad8041886fcad/tomcat-embed-core-8.0.28.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.0.28/12ff86316ae8835b410461401ce8a77d040b0c5f/tomcat-embed-el-8.0.28.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-logging-juli/8.0.28/315e9c3d6d93fcb482eea89ee23c9af9fd1cc4b5/tomcat-embed-logging-juli-8.0.28.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.0.28/61dfc07af876f1fa9ee9f30112babf30c721a543/tomcat-embed-websocket-8.0.28.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.2.2.Final/990905cd9184450c5f3e929ab2566305e3a67fa1/hibernate-validator-5.2.2.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.6.3/435efa54afd2853995546802280e8cd2d2770d00/jackson-annotations-2.6.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.6.3/142ce64dcd709a4b5f6e7d71305a31d3893d077/jackson-core-2.6.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.2.3.RELEASE/249921ead97248410ac04f854075f0a1c1a567e4/spring-beans-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.3.RELEASE/fb26a160d984eb9cbf01fbf38f4b17e15fdd50e1/spring-context-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.3.RELEASE/67b064c726c276436387c7a183a49deda153a6cc/spring-expression-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.0.3.RELEASE/9f420c5742ad063970c5d33f60680a1cee777aa5/spring-security-core-4.0.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.2.3.RELEASE/617420d7e0351c334aa4495d6f30ad21c4c643a7/spring-tx-4.2.3.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.11.1.RELEASE/bb04a4cba7a44b8822a63e1681eb9667955bc8bf/spring-data-commons-1.11.1.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.13/7fcf30c25b8f4a9379b9dad0d3f487b25272c026/slf4j-api-1.7.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.13/d78d2242e14e4182625152d225f76ae52b43491d/jcl-over-slf4j-1.7.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.3/d90276fff414f06cb375f2057f6778cd63c6082f/logback-classic-1.1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.13/43759e986de5fec7045e35e9533e5ad2f6cd1b05/jul-to-slf4j-1.7.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.13/b5f4685073a6ffba6bf7e1d51e2b5fb83bdfa953/log4j-over-slf4j-1.7.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.1.0/dbbd699a1486ad0f2ed6f5af6cfed66acacb9056/classmate-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/lee/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.3/e3c02049f2dbbc764681b40094ecf0dcbc99b157/logback-core-1.1.3.jar</AuxClasspathEntry>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/exception/MongoServiceException.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/repository/MongoServiceInstanceBindingRepository.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/repository/MongoServiceInstanceRepository.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/model/MongoServiceInstance.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/config/Application.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/config/MongoConfig.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/config/BrokerConfig.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/config/WebXml.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/config/CatalogConfig.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/MongoCatalogService.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceBindingService.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceService.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl.java</SrcDir>
+    <SrcDir>/home/lee/OPENPASS-SERVICE-JAVA-BROKER-MONGO/src/main/java/org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java</SrcDir>
+  </Project>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" start="30" end="137" sourcefile="MongoAdminService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" name="createDatabase" signature="(Ljava/lang/String;)Lcom/mongodb/DB;" isStatic="false">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" start="58" end="74" startBytecode="0" endBytecode="251" sourcefile="MongoAdminService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java"/>
+    </Method>
+    <Class classname="org.openpaas.servicebroker.mongodb.exception.MongoServiceException" role="CLASS_EXCEPTION">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.exception.MongoServiceException" start="19" end="20" sourcefile="MongoServiceException.java" sourcepath="org/openpaas/servicebroker/mongodb/exception/MongoServiceException.java"/>
+    </Class>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" start="73" end="73" startBytecode="65" endBytecode="65" sourcefile="MongoAdminService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java"/>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" start="73" end="73" startBytecode="65" endBytecode="65" sourcefile="MongoAdminService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService" start="30" end="104" sourcefile="MongoServiceInstanceService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceService.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService" name="createServiceInstance" signature="(Lorg/openpaas/servicebroker/model/CreateServiceInstanceRequest;)Lorg/openpaas/servicebroker/model/ServiceInstance;" isStatic="false">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService" start="45" end="75" startBytecode="0" endBytecode="458" sourcefile="MongoServiceInstanceService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceService.java"/>
+    </Method>
+    <LocalVariable name="db" register="3" pc="161" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" name="createDatabase" signature="(Ljava/lang/String;)Lcom/mongodb/DB;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" start="58" end="74" startBytecode="0" endBytecode="251" sourcefile="MongoAdminService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoAdminService.java"/>
+    </Method>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService" start="71" end="71" startBytecode="162" endBytecode="162" sourcefile="MongoServiceInstanceService.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/MongoServiceInstanceService.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="30" end="185" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" name="getAuthKey" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="141" end="153" startBytecode="0" endBytecode="273" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="566" end="567" startBytecode="0" endBytecode="36" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="148" end="148" startBytecode="72" endBytecode="72" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="30" end="185" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" name="getAuthKey" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="141" end="153" startBytecode="0" endBytecode="273" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="958" end="958" startBytecode="0" endBytecode="37" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="147" end="147" startBytecode="46" endBytecode="46" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="30" end="185" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" name="getUAAToken" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="58" end="91" startBytecode="0" endBytecode="450" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" start="72" end="72" startBytecode="74" endBytecode="74" sourcefile="SampleMeteringOAuthServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringOAuthServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl" start="35" end="319" sourcefile="SampleMeteringReportServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl.java"/>
+    </Class>
+    <Method classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl" name="reportBindingInfoHTTPS" signature="(Lorg/json/JSONObject;Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl" start="163" end="204" startBytecode="0" endBytecode="573" sourcefile="SampleMeteringReportServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl.java"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl" start="184" end="184" startBytecode="129" endBytecode="129" sourcefile="SampleMeteringReportServiceImpl.java" sourcepath="org/openpaas/servicebroker/mongodb/service/impl/SampleMeteringReportServiceImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 28 Oct 2016 16:04:19 +0900" total_classes="17" referenced_classes="172" total_bugs="6" total_size="557" num_packages="5" java_version="1.8.0_101" vm_version="25.101-b13" cpu_seconds="11.02" clock_seconds="3.18" peak_mbytes="189.08" alloc_mbytes="3540.00" gc_seconds="0.07" priority_2="2" priority_1="4">
+    <PackageStats package="org.openpaas.servicebroker.mongodb.config" total_bugs="0" total_types="5" total_size="73">
+      <ClassStats class="org.openpaas.servicebroker.mongodb.config.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.config.BrokerConfig" sourceFile="BrokerConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.config.CatalogConfig" sourceFile="CatalogConfig.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.config.MongoConfig" sourceFile="MongoConfig.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.config.WebXml" sourceFile="WebXml.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openpaas.servicebroker.mongodb.exception" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="org.openpaas.servicebroker.mongodb.exception.MongoServiceException" sourceFile="MongoServiceException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openpaas.servicebroker.mongodb.model" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="org.openpaas.servicebroker.mongodb.model.MongoServiceInstance" sourceFile="MongoServiceInstance.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openpaas.servicebroker.mongodb.repository" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="org.openpaas.servicebroker.mongodb.repository.MongoServiceInstanceBindingRepository" sourceFile="MongoServiceInstanceBindingRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.repository.MongoServiceInstanceRepository" sourceFile="MongoServiceInstanceRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.openpaas.servicebroker.mongodb.service.impl" total_bugs="6" total_types="8" total_size="452" priority_2="2" priority_1="4">
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.MongoAdminService" sourceFile="MongoAdminService.java" interface="false" size="81" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.MongoCatalogService" sourceFile="MongoCatalogService.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceBindingService" sourceFile="MongoServiceInstanceBindingService.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.MongoServiceInstanceService" sourceFile="MongoServiceInstanceService.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl" sourceFile="SampleMeteringOAuthServiceImpl.java" interface="false" size="73" bugs="3" priority_1="3"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringOAuthServiceImpl$1" sourceFile="SampleMeteringOAuthServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl" sourceFile="SampleMeteringReportServiceImpl.java" interface="false" size="160" bugs="1" priority_1="1"/>
+      <ClassStats class="org.openpaas.servicebroker.mongodb.service.impl.SampleMeteringReportServiceImpl$1" sourceFile="SampleMeteringReportServiceImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="433" invocations="1124" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="20555" standardDeviationMircosecondsPerInvocation="897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="263" invocations="172" avgMicrosecondsPerInvocation="1529" maxMicrosecondsPerInvocation="23466" standardDeviationMircosecondsPerInvocation="3261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="160" invocations="421" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="9101" standardDeviationMircosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="109" invocations="172" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="28564" standardDeviationMircosecondsPerInvocation="2381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="108" invocations="1136" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1506" standardDeviationMircosecondsPerInvocation="71"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="83" invocations="71" avgMicrosecondsPerInvocation="1172" maxMicrosecondsPerInvocation="9325" standardDeviationMircosecondsPerInvocation="1718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="78" invocations="1080" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="2696" standardDeviationMircosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="246" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="17795" standardDeviationMircosecondsPerInvocation="1201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="74" invocations="77" avgMicrosecondsPerInvocation="964" maxMicrosecondsPerInvocation="8599" standardDeviationMircosecondsPerInvocation="1368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="66" invocations="71" avgMicrosecondsPerInvocation="934" maxMicrosecondsPerInvocation="5951" standardDeviationMircosecondsPerInvocation="1161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="64" invocations="78" avgMicrosecondsPerInvocation="821" maxMicrosecondsPerInvocation="8322" standardDeviationMircosecondsPerInvocation="1244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="60" invocations="172" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="8012" standardDeviationMircosecondsPerInvocation="838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="60" invocations="172" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="5064" standardDeviationMircosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="71" avgMicrosecondsPerInvocation="805" maxMicrosecondsPerInvocation="42879" standardDeviationMircosecondsPerInvocation="5032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="71" avgMicrosecondsPerInvocation="761" maxMicrosecondsPerInvocation="9730" standardDeviationMircosecondsPerInvocation="1260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="53" invocations="71" avgMicrosecondsPerInvocation="749" maxMicrosecondsPerInvocation="4170" standardDeviationMircosecondsPerInvocation="899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="49" invocations="172" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="10112" standardDeviationMircosecondsPerInvocation="871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="49" invocations="172" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="3669" standardDeviationMircosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="39" invocations="63" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="4593" standardDeviationMircosecondsPerInvocation="832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="36" invocations="172" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="2523" standardDeviationMircosecondsPerInvocation="432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="32" invocations="172" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="2768" standardDeviationMircosecondsPerInvocation="409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="17" avgMicrosecondsPerInvocation="1784" maxMicrosecondsPerInvocation="13802" standardDeviationMircosecondsPerInvocation="4018"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

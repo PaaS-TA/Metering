@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+cd ./sample_api_node_caller
+
+npm install
+
+export DEBUG=*
+
+# 포트번호는 환경에 맞게 커스터마이징 할 것
+export PORT=9601
+
+node app.js
+
+wait
