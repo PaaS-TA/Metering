@@ -1,12 +1,23 @@
-# PaaS-TA-Metering
-
 **파스-타 미터링은 구성은 다음과 같다.**
 
-    |**패키지명**|**설명**|
-    |-------|------------|
-    |PaaS-TA-Usage-reporting|CF-Abacus와 연동하여 집계 사용량을 조회 할 수 있는 API|
-    |PaaS-TA-API-Metering-Sample|CF-Abacus와 연동하여 API 사용량을 수집 하는 예제로 Node와 Java 버전으로 구성되어 있다.|
-    |PaaS-TA-Service-Metering-Sample|CF-Abacus와 연동하여 MongoDB 서비스 사용량을 수집하는 예제로 Java 버전으로 구성되어 있다.|
+<table>
+<tr>
+  <td>패키지명</td>
+  <td>설명</td>
+</tr>
+<tr>
+  <td>PaaS-TA-Usage-reporting</td>
+  <td>CF-Abacus와 연동하여 집계 사용량을 조회 할 수 있는 API</td>
+</tr>
+<tr>
+  <td>PaaS-TA-API-Metering-Sample</td>
+  <td>CF-Abacus와 연동하여 API 사용량을 수집 하는 예제로 Node와 Java 버전으로 구성되어 있다.</td>
+</tr>
+<tr>
+  <td>PaaS-TA-Service-Metering-Sample</td>
+  <td>CF-Abacus와 연동하여 MongoDB 서비스 사용량을 수집하는 예제로 Java 버전으로 구성되어 있다.</td>
+</tr>
+</table>
 
 CF-Abacus와 예제의 설치 및 실행은 다음을 참고한다.
 
