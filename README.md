@@ -8,6 +8,7 @@
 |PaaS-TA-Service-Metering-Sample|CF-Abacus와 연동하여 MongoDB 서비스 사용량을 수집하는 예제로 Java 버전으로 구성되어 있다.|
 
 CF-Abacus와 예제의 설치 및 실행은 다음을 참고한다.
+
 [파스-타 미터링 설치 가이드]
 (https://github.com/OpenPaaSRnD/Documents-PaaSTA-2.0/blob/master/Install-Guide/metering/PaaS-TA_Metering_%EC%84%A4%EC%B9%98_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
