@@ -13,7 +13,7 @@ applications:
     NODE_TLS_REJECT_UNAUTHORIZED: 0 # SSL flag off
     API: https://api.bosh-lite.com  # CF API 서비스
     COLLECTOR: https://abacus-usage-collector.bosh-lite.com/v1/metering/collected/usage
-    SECURED: true                   # Secured Abacus 설정: false or true
+    SECURED: false                   # Secured Abacus 설정: false or true
     AUTH_SERVER: https://api.bosh-lite.com:443
     CLIENT_ID: abacus
     CLIENT_SECRET: secret
@@ -25,4 +25,3 @@ applications:
       spULZVNRxq7veq/fzwIDAQAB
       -----END PUBLIC KEY-----
     JWTALGO: RS256
-    THROTTLE: 2

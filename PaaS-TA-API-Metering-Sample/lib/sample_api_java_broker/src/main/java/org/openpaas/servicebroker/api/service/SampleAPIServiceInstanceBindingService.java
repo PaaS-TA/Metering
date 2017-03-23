@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBindingService{
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(SampleAPIServiceInstanceBindingService.class);
-	
+
 	@Autowired
 	private Environment env;
 
@@ -31,7 +31,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 		String planId = request.getPlanId();
 		String bindingId = request.getBindingId();
 		String appGuid = request.getAppGuid();
-		
+
 		//요청된 서비스ID와 플랜ID의 유효성 확인
 		String existServiceId;
 		int sNumber=0;
@@ -46,7 +46,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				}
 				else{
 					logger.error("Invalid ServiceID : ["+serviceId+"]");
-					throw new ServiceBrokerException("Invalid ServiceID : ["+serviceId+"]");					
+					throw new ServiceBrokerException("Invalid ServiceID : ["+serviceId+"]");
 				}
 			}
 			existServiceId="Service"+sNumber+" "+env.getProperty("Service"+sNumber+".Name")+" ServiceID";
@@ -54,7 +54,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				break;
 			}
 		}while(env.getProperty("Service"+sNumber+".Name")!=null);
-		
+
 		//플랜ID 유효성확인
 		String existPlanId;
 		int pNumber=0;
@@ -68,7 +68,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				}
 				else{
 					logger.error("Invalid ServiceID : ["+serviceId+"]");
-					throw new ServiceBrokerException("Invalid PlanID : ["+planId+"]");					
+					throw new ServiceBrokerException("Invalid PlanID : ["+planId+"]");
 				}
 			}
 			existPlanId= "Service"+sNumber+" "+env.getProperty("Service"+sNumber+".Name")+" Plan"+pNumber+" "+env.getProperty("Service"+sNumber+".Plan"+pNumber+".Name")+" PlanID";
@@ -85,7 +85,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				//파라미터는 입력되었으나 키 값이'serviceKey'로 입력되지 않은 경우
 				logger.error("Parameter 'serviceKey' not entered.'");
 				throw new ServiceBrokerException("Parameter 'serviceKey' not entered. ex) cf bind-service [appName] [serviceInstanceName] -c '{\"serviceKey\":\"[your ServiceKey]\"}'");
-			}else{				
+			}else{
 				credentials.put("serviceKey", serviceKey);
 			}
 		}catch(NullPointerException e){
@@ -93,11 +93,11 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 			logger.error("no serviceKey entered");
 			throw new ServiceBrokerException("Please enter your serviceKey. ex) cf bind-service [appName] [serviceInstanceName] -c '{\"serviceKey\":\"[your ServiceKey]\"}'");
 		}
-		
+
 		credentials.put("url", env.getProperty("Service"+sNumber+".Endpoint"));
 		credentials.put("documentUrl", env.getProperty("Service"+sNumber+".DocumentationUrl"));
 		String syslogDrainUrl = env.getProperty("Service"+sNumber+".Provider");
-		
+
 		ServiceInstanceBinding binding = new ServiceInstanceBinding(bindingId, instanceId, credentials, syslogDrainUrl, appGuid);
 		logger.debug("End - PublicAPIServiceInstanceBindingService.createServiceInstanceBinding()");
 		return binding;
@@ -110,12 +110,12 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 		String servieceInstanceId = request.getInstance().getServiceInstanceId();
 		String serviceId =request.getServiceId();
 		String planId = request.getPlanId();
-		
+
 		Map<String,Object> credentials = new LinkedHashMap<String, Object>();
 		String syslogDrainUrl = null;
 		String appGuid = "";
 		//TODO DB없이 appGuid를 갖고 있을 수 있는지?
-		
+
 		//요청된 서비스ID와 플랜ID의 유효성 확인
 		String existServiceId;
 		int sNumber=0;
@@ -130,7 +130,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				}
 				else{
 					logger.error("Invalid ServiceID : ["+serviceId+"]");
-					throw new ServiceBrokerException("Invalid ServiceID : ["+serviceId+"]");					
+					throw new ServiceBrokerException("Invalid ServiceID : ["+serviceId+"]");
 				}
 			}
 			existServiceId="Service"+sNumber+" "+env.getProperty("Service"+sNumber+".Name")+" ServiceID";
@@ -138,7 +138,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				break;
 			}
 		}while(env.getProperty("Service"+sNumber+".Name")!=null);
-		
+
 		//플랜ID 유효성확인
 		String existPlanId;
 		int pNumber=0;
@@ -152,7 +152,7 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				}
 				else{
 					logger.error("Invalid PlanID : ["+planId+"]");
-					throw new ServiceBrokerException("Invalid PlanID : ["+planId+"]");					
+					throw new ServiceBrokerException("Invalid PlanID : ["+planId+"]");
 				}
 			}
 			existPlanId= "Service"+sNumber+" "+env.getProperty("Service"+sNumber+".Name")+" Plan"+pNumber+" "+env.getProperty("Service"+sNumber+".Plan"+pNumber+".Name")+" PlanID";
@@ -160,11 +160,11 @@ public class SampleAPIServiceInstanceBindingService implements ServiceInstanceBi
 				break;
 			}
 		}while(env.getProperty("Service"+sNumber+".Plan"+pNumber+".Name")!=null);
-		
-		
+
+
 		logger.debug("End - PublicAPIServiceInstanceBindingService.deleteServiceInstanceBinding()");
 		return new ServiceInstanceBinding(bindingId,servieceInstanceId,credentials,syslogDrainUrl,appGuid);
 	}
-	
-	
+
+
 }

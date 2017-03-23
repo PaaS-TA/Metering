@@ -17,18 +17,18 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 public class CatalogConfig {
-	
+
 	@Autowired
 	private Environment env;
-	
+
 	public int sNumber =1;
 	public int pNumber =1;
-	
+
 	@Bean
 	public Catalog catalog() {
-		
+
 		List<String> serviceNames = getServiceNames();
-		List<ServiceDefinition> serviceDefs = new ArrayList<ServiceDefinition>();	
+		List<ServiceDefinition> serviceDefs = new ArrayList<ServiceDefinition>();
 		List<String> requires =new ArrayList<String>();
 		requires.add("syslog_drain");
 		for(sNumber=1;sNumber<=serviceNames.size();sNumber++){
@@ -37,7 +37,7 @@ public class CatalogConfig {
 						"Service"+sNumber+" "+env.getProperty("Service"+sNumber+".Name")+" ServiceID",
 						env.getProperty("Service"+sNumber+".Name"),
 						getServiceDescription(),
-						true, 
+						true,
 						false,
 						getPlans(),
 						Arrays.asList("Sample API Service"),
@@ -45,7 +45,7 @@ public class CatalogConfig {
 						requires,
 						null
 					)
-				);		
+				);
 			}
 		return new Catalog(serviceDefs);
 	}
@@ -61,7 +61,7 @@ public class CatalogConfig {
 		return sdMetadata;
 	}
 
-	private Map<String,Object> getPlanMetadata(String planName) {		
+	private Map<String,Object> getPlanMetadata(String planName) {
 		Map<String,Object> planMetadata = new HashMap<String,Object>();
 		planMetadata.put("costs", getCosts());
 		planMetadata.put("bullets", getBullets(planName+" Plan"));
@@ -95,13 +95,13 @@ public class CatalogConfig {
 					env.getProperty("Service"+sNumber+".Plan"+pNumber+".Name"),
 					getPlanDescription(),
 					planMetadata,
-					isItFree(planMetadata)						
-				)			
+					isItFree(planMetadata)
+				)
 			);
 		}
 		return plans;
 	}
-	
+
 	private boolean isItFree(Map<String,Object> planMetadata){
 		boolean isItFree = false;
 		Map<String, Object> map = new HashMap<>();
@@ -111,17 +111,17 @@ public class CatalogConfig {
 		};
 		return isItFree;
 	}
-	
+
 	private List<String> getServiceNames(){
 		List<String> serviceNames = new ArrayList<String>();
 		int i=0;
 		do{
 			i++;
 			if(env.getProperty("Service"+i+".Name")!=null){
-				serviceNames.add(env.getProperty("Service"+i+".Name"));				
+				serviceNames.add(env.getProperty("Service"+i+".Name"));
 			}
 		}while(env.getProperty("Service"+i+".Name")!=null);
-		
+
 		return serviceNames;
 	}
 
@@ -134,21 +134,21 @@ public class CatalogConfig {
 				planNames.add(env.getProperty("Service"+sNumber+".Plan"+i+".Name"));
 			}
 		}while(env.getProperty("Service"+sNumber+".Plan"+i+".Name")!=null);
-		
+
 		return planNames;
 	}
-	
+
 	private String getPlanDescription(){
-		
+
 		String planDescription ="no plan description";
 		if(env.getProperty("Service"+sNumber+".Plan"+pNumber+".Description")!=null){
 			planDescription = env.getProperty("Service"+sNumber+".Plan"+pNumber+".Description");
 		}
 		return planDescription;
 	}
-	
+
 	private String getServiceDescription(){
-		
+
 		String serviceDescription ="no service description";
 		if(env.getProperty("Service"+sNumber+".Description")!=null){
 			serviceDescription = env.getProperty("Service"+sNumber+".Description");
