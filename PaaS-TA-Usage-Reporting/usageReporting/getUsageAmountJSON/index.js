@@ -33,17 +33,23 @@ var calUsageToNow = function(reportEndTime, insCnt, memQan, appState, consuming)
 var getValidQanFromCwindow = function(abWindows) {
 
   var consuming = 0;
+  var flag = true;
+  
+  debug('abWindows:::' + abWindows);
 
   abWindows.forEach(function(pwindow) {
-    if (pwindow != '' && pwindow != null) {
-      pwindow.forEach(function(cwindow) {
-        if (cwindow != '' && cwindow != null) {
-           // debug('cwindow.quantity.consuming:::' + cwindow.quantity.consuming);
-           // consuming = cwindow.quantity.consuming;
-          debug('cwindow.summary:::' + cwindow.summary);
-          consuming = cwindow.summary;
-        }
-      });
+    if (pwindow != '' && pwindow != null && flag) {
+      // pwindow.forEach(function(cwindow) {
+      //   if (cwindow != '' && cwindow != null) {
+      //      // debug('cwindow.quantity.consuming:::' + cwindow.quantity.consuming);
+      //      // consuming = cwindow.quantity.consuming;
+      //     debug('cwindow.summary:::' + cwindow.summary);
+      //     consuming = cwindow.summary;
+      //   }
+      // });
+      debug('pwindow.summary:::' + pwindow.summary);
+      consuming = pwindow.summary;
+      flag = false;
     }
   });
 
@@ -63,6 +69,9 @@ var linuxContainerResSeq = 0;
 
 // abacus 의 메모리 리소스 사용량 데이타는 0 번째 배열에 위치한다.
 var memResSeq = 0;
+
+// abacus 의 month 사용량 데이타는 4 번째 배열에 위치한다.
+var monthUsageSeq = 4;
 
 ////////////////////////////////////////////////////////////////////////// API 1번
 ////////////////////////////////////////////////////////////////////////// API 1번
@@ -92,7 +101,8 @@ var getOrgUsage = function(cfData, abData, spaceId, cb) {
 
           var arrObject =  new Object();
 
-          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
+
           var consuming = getValidQanFromCwindow(abWindows);
 
           debug('reportEndTime:' + reportEndTime);
@@ -133,7 +143,7 @@ var getOrgUsage = function(cfData, abData, spaceId, cb) {
 
       if (!abEntity.amounted && (spaceId == 'all' || (spaceId != 'all' && spaceData.space_id == spaceId))){
 
-        var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+        var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
         var consuming = getValidQanFromCwindow(abWindows);
 
         debug('reportEndTime:' + reportEndTime);
@@ -226,7 +236,7 @@ var getOrgMonthlyUsage = function(orgId, monthIndex, abDataArr, spaceId, cb) {
           if (abEntity.consumer_id == ('app:' + cfEntity.metadata.guid) && (spaceId == 'all' || (spaceId != 'all' && cfEntity.entity.space_guid == spaceId))){
           // if (spaceId == 'all' || (spaceId != 'all' && cfEntity.entity.space_guid == spaceId)){
 
-            var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+            var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
             var consuming = getValidQanFromCwindow(abWindows);
 
             //addUsage =  calUsageToNow(reportEndTime, cfEntity.entity.instances, cfEntity.entity.memory, cfEntity.entity.state, consuming);
@@ -277,7 +287,7 @@ var getOrgMonthlyUsage = function(orgId, monthIndex, abDataArr, spaceId, cb) {
         // 집계 플래그가 true 가 아니면 다시 집계 한다.
         if (!abEntity.amounted && (spaceId == 'all' || (spaceId != 'all' && spaceData.space_id == spaceId))){
 
-          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
           var consuming = getValidQanFromCwindow(abWindows);
 
           addUsage =  consuming;
@@ -393,7 +403,7 @@ var getAppMonthlyUsage = function(orgId, monthIndex, abDataArr, spaceId, appId, 
 
           if (abEntity.consumer_id == ('app:' + appId) && cfEntity.metadata.guid == appId ) {
 
-              var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+              var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
               var consuming = getValidQanFromCwindow(abWindows);
 
               instance = cfEntity.entity.instances;
@@ -417,7 +427,7 @@ var getAppMonthlyUsage = function(orgId, monthIndex, abDataArr, spaceId, appId, 
 
         if (! abEntity.amounted && abEntity.consumer_id == ('app:' + appId)) {
 
-          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows;
+          var abWindows = abEntity.resources[linuxContainerResSeq].plans[0].aggregated_usage[memResSeq].windows[monthUsageSeq];
           var consuming = getValidQanFromCwindow(abWindows);
 
           instance = 0;
