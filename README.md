@@ -30,7 +30,7 @@ CF-Abacus와 예제의 설치 및 실행은 다음을 참고한다.
 - [파스-타 Node API 미터링 개발 가이드]
 (https://github.com/PaaS-TA/Guide-2.0-Linguine-/blob/master/Development-Guide/PaaS-TA_Node.js_API_%EB%AF%B8%ED%84%B0%EB%A7%81_%EA%B0%9C%EB%B0%9C_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
-- [파스-타 서비스 미터링 개발 가이드](https://github.com/PaaS-TA/Guide-2.0-Linguine-/blob/master/Development-Guide/PaaS-TA_Java_%EC%84%9C%EB%B9%84%EC%8A%A4_%EB%AF%B8%ED%84%B0%EB%A7%81_%EA%B0%9C%EB%B0%9C_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
+*[파스-타 서비스 미터링 개발 가이드](https://github.com/PaaS-TA/Guide-2.0-Linguine-/blob/master/Development-Guide/PaaS-TA_Java_%EC%84%9C%EB%B9%84%EC%8A%A4_%EB%AF%B8%ED%84%B0%EB%A7%81_%EA%B0%9C%EB%B0%9C_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
 - [파스-타 리포팅 API]
 (https://github.com/PaaS-TA/Guide-2.0-Linguine-/blob/master/Use-Guide/PaaS-TA_Usage_Reporting_API_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
